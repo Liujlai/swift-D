@@ -8,8 +8,6 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
 // MARK: - Router跳转
     /**
      Router代码现在封装在一个AppNavigation对象中。
@@ -30,7 +28,9 @@ class ViewController: UIViewController {
 // MARK: - Moya网络
     /**
      //网络请求
-     在Network/中配置Moya
+        在Network/中配置Moya
+        在请求数目不太多
+        根据tabbar的数来初始化Moya请求的provider
      */
 // MARK: - 数据解析
     /**
@@ -57,18 +57,20 @@ class ViewController: UIViewController {
     /**
      swift_D-Bridging-Header.h
      */
-    
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
 
+// MARK: -  Refresh
+/**
+    Refresh/
+    上拉刷新和下拉加在
+ 
+    例：
+    Test/RefreshViewController.swift
+ */
+// MARK: -  页面加载数据时的一个动画
+    /**
+ 
+     BaseViewController.swift
+    页面加载数据时的一个动画，有数据时
+     */
 
-}
 

@@ -8,7 +8,11 @@
 
 import Foundation
 import UIKit
-import Cupcake
+// MARK: - @_exported
+//@_exported import关键字导入,这样就可以全局通用了
+@_exported import Cupcake
+@_exported import RxSwift
+@_exported import RxCocoa
 //屏幕的宽度
 let kScreenW = UIScreen.main.bounds.size.width
 //屏幕的高度
@@ -19,6 +23,8 @@ let kisSE = UIScreen.main.bounds.width == 320
 let kisX = UIScreen.main.bounds.height == 812
 let kTabBarH = CGFloat(kisX ? (49.0+34.0) : 49.0)
 
+/// RxSwift 回收池
+let disposeBag = DisposeBag()
 
 let kAppColor = "#00C6B0";
 

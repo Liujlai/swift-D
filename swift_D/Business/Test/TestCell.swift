@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Cupcake
 import Stevia
 class TestCell: UITableViewCell {
 

@@ -9,21 +9,44 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import Cupcake
-class TestViewController: UIViewController {
+class TestViewController: BaseViewController {
     var tableView:UITableView!
     let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "音乐"
+        setupUI()
+        loadData()
+    }
+
+    //    弹出提示
+    func showAlert(title:String,message:String){
+        Alert.title(title).message(message).action("确定").show()
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+}
+//MARK： 设置UI界面
+extension TestViewController{
+    override func setupUI() {
+        contenView = self.tableView
         self.tableView = UITableView(frame: self.view.frame, style: .plain)
         self.tableView.register(TestCell.self, forCellReuseIdentifier: "cell")
         self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
         self.view.addSubview(self.tableView)
-
         
-        let networkService = DoubanNetworkService()
+        super.setupUI()
+    }
+}
 
+//MARK: 请求数据
+extension TestViewController{
+    fileprivate func loadData(){
+        let networkService = DoubanNetworkService()
+        
         let data = networkService.loadChannels()
         //        定义cell 将数据绑定到表格
         data.bind(to: tableView.rx.items){(tableView,row,element) in
@@ -40,25 +63,27 @@ class TestViewController: UIViewController {
                 let message = "歌手：\(song.artist!)\n歌曲：\(song.title!)"
                 self?.showAlert(title:"歌曲信息",message:message)
             }).disposed(by: disposeBag)
+//        //            3.数据请求完成
+//        self.loadDataFinished()
+        
+        DispatchQueue.global(qos: .default).asyncAfter(deadline: DispatchTime.now()+2.0){
+            //执行完毕，主线程更新
+            DispatchQueue.main.async {
+                self.loadDataFinished()
+            }
+        }
     }
-
-    //    弹出提示
-    func showAlert(title:String,message:String){
-        Alert.title(title).message(message).action("确定").show()
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
-    //        自定义数据
-    //        let data = Observable.just([
-    //            "文本输入框的用法",
-    //            "开关按钮的用法",
-    //            "进度条的用法",
-    //            "文本标签的用法",
-    //            ])
-    
 }
+
+
+
+
+
+
+//        自定义数据
+//        let data = Observable.just([
+//            "文本输入框的用法",
+//            "开关按钮的用法",
+//            "进度条的用法",
+//            "文本标签的用法",
+//            ])

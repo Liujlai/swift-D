@@ -11,6 +11,7 @@ target 'swift_D' do
   pod 'Moya/RxSwift'                                #NET请求
   pod 'ObjectMapper'                                #JSON解析
   pod 'MBProgressHUD'                               #HUD提示
+  pod 'MJRefresh'                                   #refresh
   # Pods for swift_D
 
 end

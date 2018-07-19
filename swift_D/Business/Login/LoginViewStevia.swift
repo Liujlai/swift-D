@@ -11,8 +11,10 @@ import UIKit
 import Stevia
 class LoginViewStevia: UIView {
     
-    let email = UITextField()
+    let validation = UILabel()
+    let username = UITextField()
     let password = UITextField()
+    let repeatedPassword = UITextField()
     let login = UIButton()
     
     convenience init() {
@@ -22,31 +24,40 @@ class LoginViewStevia: UIView {
     
     func reder() {
         sv(
-            email,
+            validation,
+            username,
             password,
+            repeatedPassword,
             login
         )
         
         layout(
             100,
-            |-email-| ~ 80,
+            |-validation-| ~ 80,
+            8,
+            |-username-| ~ 80,
             8,
             |-password-| ~ 80,
+            8,
+            |-repeatedPassword-| ~ 80,
             "",
             |login| ~ 80,
             80
         )
         
         backgroundColor = UIColor.white
-        email.style(commonFieldStyle)
-        password.style(commonFieldStyle).style { (f) in
+        validation.align(.center).font("26");
+        username.style(commonFieldStyle)
+        password.style(commonFieldStyle)
+        repeatedPassword.style(commonFieldStyle).style { (f) in
             f.isSecureTextEntry = true
             f.returnKeyType = .done
         }
         login.backgroundColor = .lightGray
-        email.placeholder = "Email"
-        password.placeholder = "Password"
-        login.setTitle("Login", for: .normal)
+        username.placeholder = "账号"
+        password.placeholder = "密码"
+        repeatedPassword.placeholder = "确认密码"
+        login.setTitle("登录", for: .normal)
     }
     func commonFieldStyle(_ f:UITextField)  {
         f.borderStyle = .roundedRect
