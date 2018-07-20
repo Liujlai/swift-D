@@ -31,7 +31,7 @@ class BaseViewController: UIViewController {
     //    MARK：系统回调
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupUI()
     }
 }
 

@@ -23,7 +23,7 @@ class LTabbarViewController: UITabBarController {
         addChildController(LoginViewController(), title: "首页", imageName: "pfb_tabbar_homepage")
         addChildController(GitHubViewController(), title: "发现", imageName: "pfb_tabbar_order")
         addChildController(RefreshViewController(), title: "消息", imageName: "pfb_tabbar_discover")
-        addChildController(TestViewController(), title: "我的", imageName: "pfb_tabbar_mine")
+        addChildController(MineViewController(), title: "我的", imageName: "pfb_tabbar_mine")
     }
     
     // MARK: 添加子控制器

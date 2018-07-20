@@ -52,6 +52,7 @@ extension TestViewController{
         data.bind(to: tableView.rx.items){(tableView,row,element) in
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
             cell.textLabel?.text = "\(element.name!)"
+            cell.imageView?.img("pfb_tabbar_discover_selected")
             cell.accessoryType = .disclosureIndicator //行末加箭头
             return cell
             }.disposed(by: disposeBag)

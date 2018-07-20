@@ -22,12 +22,16 @@ let kisSE = UIScreen.main.bounds.width == 320
 //判断设备是不是iPhoneX
 let kisX = UIScreen.main.bounds.height == 812
 let kTabBarH = CGFloat(kisX ? (49.0+34.0) : 49.0)
-
+let kStatusH = CGFloat(kisX ? (44.0) : 20.0)
+let KNAVIGATIONANDSTATUSBARHEIGHT = kStatusH+44.0
 /// RxSwift 回收池
 let disposeBag = DisposeBag()
-
-let kAppColor = "#00C6B0";
-
+//颜色
+let kAppColor   = "#00C6B0"
+let kLineColor  = "#a8a8a8"
+let kWhiteColor = "#ffffff"
+let kRandom     = "random" //随机颜色
+//环境地址
 let GfoodsUrl = "https://www.365greenlife.com/api/tiptop/v1/"
 let token = "  "
 let kJD = "http://139.199.169.203/"
