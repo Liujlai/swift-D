@@ -11,7 +11,9 @@ import UIKit
 
 enum MyNavigation: Navigation {
     case login
-    case test
+    case test(String)
+    case gitHub
+    case mine
 //    case profile(Person)
 }
 struct MyAppNavigation: AppNavigation {
@@ -21,10 +23,17 @@ struct MyAppNavigation: AppNavigation {
             switch navigation {
             case .login:
                 return LoginViewController()
-            case .test:
-                return TestViewController()
+            case .test(let a):
+                let v = TestViewController()
+                v.str = a
+                return v
 //            case .profile(let p):
 //                return ProfileViewController(person: p)
+            case .gitHub:
+                return GitHubViewController()
+            case .mine:
+               
+                return MineViewController()
             }
         }
         return UIViewController()

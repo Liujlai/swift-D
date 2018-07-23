@@ -12,6 +12,7 @@ class MineView: UIView {
     let icon = UIImageView()
     let name = UILabel()
     let tel  = UILabel()
+    
     convenience init() {
         self.init(frame: CGRect.zero)
         reder()

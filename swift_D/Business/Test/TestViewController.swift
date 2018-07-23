@@ -7,18 +7,16 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 class TestViewController: BaseViewController {
+    var str:String = ""
     var tableView:UITableView!
-    let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "音乐"
         setupUI()
         loadData()
+        print(str)
     }
-
     //    弹出提示
     func showAlert(title:String,message:String){
         Alert.title(title).message(message).action("确定").show()
@@ -76,15 +74,3 @@ extension TestViewController{
     }
 }
 
-
-
-
-
-
-//        自定义数据
-//        let data = Observable.just([
-//            "文本输入框的用法",
-//            "开关按钮的用法",
-//            "进度条的用法",
-//            "文本标签的用法",
-//            ])

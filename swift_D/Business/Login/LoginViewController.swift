@@ -73,7 +73,7 @@ class LoginViewController: UIViewController {
     func login() {
         print("login")
         MBProgressHUD.showInfo("login")
-        navigate(.test)//跳转到test
+        navigate(.mine)//跳转到test
 
     }
    

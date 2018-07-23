@@ -9,6 +9,16 @@
 import UIKit
 
 class MineViewController: BaseViewController {
+    //       自定义数据
+    public var arr = [String]()
+    let data = Observable.just([
+        "分类管理",
+        "商品",
+        "联系客服",
+        "设置",
+        ])
+    
+    //       懒加载tableView
     fileprivate lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.frame = CGRect(x: 0,
@@ -19,21 +29,15 @@ class MineViewController: BaseViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return tableView
     }()
-    //tableHeaderView
+    
+    //        tableHeaderView
     fileprivate lazy var mineView: MineView = {
        let mineView = MineView()
         mineView.frame = CGRect(x: 0, y: KNAVIGATIONANDSTATUSBARHEIGHT, width: kScreenW, height: 160)
         return mineView
     }()
+    
     override func setupUI() {
-//                自定义数据
-        let data = Observable.just([
-            "分类管理",
-            "商品",
-            "联系客服",
-            "设置",
-            ])
-        
         //        定义cell 将数据绑定到表格
         data.bind(to: tableView.rx.items){(tableView,row,element) in
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
@@ -46,19 +50,26 @@ class MineViewController: BaseViewController {
             self.loadDataFinished()
         super.setupUI()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.bg(kWhiteColor)
         view.addSubview(tableView)
         tableView.tableHeaderView = mineView
         setupText()
-        // Do any additional setup after loading the view.
+        mineView.onClick {[weak self]_ in 
+            self?.push()
+        }
     }
+//    绑定数据
     fileprivate func setupText() {
         mineView.name.text = "张三"
         mineView.tel.text = "17855555555"
     }
-
+//    传值跳转
+    func push(){
+        navigate(.test("🤔🤔传值跳转🤔🤔"))
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
