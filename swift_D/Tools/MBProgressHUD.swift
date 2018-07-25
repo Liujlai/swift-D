@@ -22,8 +22,8 @@ extension MBProgressHUD {
         let view = viewToShow()
         let hud = MBProgressHUD.showAdded(to: view, animated: true)
         hud.mode = .customView //模式设置为自定义视图
-        hud.customView = UIImageView(image: UIImage(named: "prompt")!) //自定义视图显示图片
-        hud.customView?.pin(40,40)
+//        hud.customView = UIImageView(image: UIImage(named: "prompt")!) //自定义视图显示图片
+//        hud.customView?.pin(40,40)
         hud.label.text = title
         hud.removeFromSuperViewOnHide = true
         //HUD窗口显示1秒后自动隐藏

@@ -38,6 +38,7 @@
 		786787F420FDE49B00A7E9FE /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786787F320FDE49B00A7E9FE /* TestViewController.swift */; };
 		786787F620FDEB7700A7E9FE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786787F520FDEB7700A7E9FE /* Router.swift */; };
 		786787F820FDEBD100A7E9FE /* MyAppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786787F720FDEBD100A7E9FE /* MyAppNavigation.swift */; };
+		7880CDEE21080B2000D8B6B1 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880CDED21080B2000D8B6B1 /* Reachability.swift */; };
 		78D4A53F20FEE183001D1DE7 /* LTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4A53E20FEE183001D1DE7 /* LTabbarViewController.swift */; };
 		78D4A54120FEE3E1001D1DE7 /* LNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4A54020FEE3E1001D1DE7 /* LNavigationController.swift */; };
 		78D4A54320FEE7B3001D1DE7 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4A54220FEE7B3001D1DE7 /* Common.swift */; };
@@ -83,6 +84,7 @@
 		786787F320FDE49B00A7E9FE /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		786787F520FDEB7700A7E9FE /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		786787F720FDEBD100A7E9FE /* MyAppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppNavigation.swift; sourceTree = "<group>"; };
+		7880CDED21080B2000D8B6B1 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		78D4A53E20FEE183001D1DE7 /* LTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTabbarViewController.swift; sourceTree = "<group>"; };
 		78D4A54020FEE3E1001D1DE7 /* LNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNavigationController.swift; sourceTree = "<group>"; };
 		78D4A54220FEE7B3001D1DE7 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				7861227520FEF0A600D2FB0F /* ObjectMapper */,
 				78D4A54620FEEC65001D1DE7 /* MD5Digest.swift */,
 				7861227320FEEE6F00D2FB0F /* MBProgressHUD.swift */,
+				7880CDED21080B2000D8B6B1 /* Reachability.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				78D4A54120FEE3E1001D1DE7 /* LNavigationController.swift in Sources */,
 				78DE07702101912700733FC2 /* MineViewController.swift in Sources */,
 				7861227B20FEF0B900D2FB0F /* ObservableType+ObjectMapper.swift in Sources */,
+				7880CDEE21080B2000D8B6B1 /* Reachability.swift in Sources */,
 				7861229F20FF2DE300D2FB0F /* NetworkService.swift in Sources */,
 				7861228720FF1B6300D2FB0F /* GitHubAPI.swift in Sources */,
 				78D4A53F20FEE183001D1DE7 /* LTabbarViewController.swift in Sources */,
@@ -593,7 +597,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7T5NXR7M3P;
 				INFOPLIST_FILE = swift_D/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,7 +620,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7T5NXR7M3P;
 				INFOPLIST_FILE = swift_D/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

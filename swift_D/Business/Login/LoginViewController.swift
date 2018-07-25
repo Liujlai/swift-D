@@ -7,12 +7,9 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 class LoginViewController: UIViewController {
 
     var v = LoginViewStevia()
-    let disposeBag = DisposeBag()
     override func loadView() {
         view = v
     }

@@ -13,6 +13,7 @@ class TestViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "音乐"
+        Reachability.currentNetReachability()
         setupUI()
         loadData()
         print(str)
