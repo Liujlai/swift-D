@@ -31,7 +31,6 @@
 		786787DA20FDD98100A7E9FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786787D920FDD98100A7E9FE /* AppDelegate.swift */; };
 		786787DC20FDD98100A7E9FE /* README.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786787DB20FDD98100A7E9FE /* README.swift */; };
 		786787E120FDD98200A7E9FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786787E020FDD98200A7E9FE /* Assets.xcassets */; };
-		786787E420FDD98200A7E9FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786787E220FDD98200A7E9FE /* LaunchScreen.storyboard */; };
 		786787EC20FDD99C00A7E9FE /* LoginViewStevia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786787EB20FDD99C00A7E9FE /* LoginViewStevia.swift */; };
 		786787EE20FDD9D000A7E9FE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786787ED20FDD9D000A7E9FE /* LoginViewController.swift */; };
 		786787F020FDDD3F00A7E9FE /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786787EF20FDDD3F00A7E9FE /* TestCell.swift */; };
@@ -76,7 +75,6 @@
 		786787D920FDD98100A7E9FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		786787DB20FDD98100A7E9FE /* README.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = README.swift; sourceTree = "<group>"; };
 		786787E020FDD98200A7E9FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		786787E320FDD98200A7E9FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		786787E520FDD98200A7E9FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		786787EB20FDD99C00A7E9FE /* LoginViewStevia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewStevia.swift; sourceTree = "<group>"; };
 		786787ED20FDD9D000A7E9FE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -267,7 +265,6 @@
 				786787D920FDD98100A7E9FE /* AppDelegate.swift */,
 				78D4A54220FEE7B3001D1DE7 /* Common.swift */,
 				7861228320FF102C00D2FB0F /* BaseViewController.swift */,
-				786787E220FDD98200A7E9FE /* LaunchScreen.storyboard */,
 				78D4A54420FEEA47001D1DE7 /* Base(Navigation+Tabbar) */,
 			);
 			path = Main;
@@ -354,7 +351,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				786787E420FDD98200A7E9FE /* LaunchScreen.storyboard in Resources */,
 				786787E120FDD98200A7E9FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,17 +459,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		786787E220FDD98200A7E9FE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				786787E320FDD98200A7E9FE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		786787E620FDD98200A7E9FE /* Debug */ = {
@@ -595,6 +580,7 @@
 			baseConfigurationReference = AF2006F6D18F1B21184E06CF /* Pods-swift_D.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7T5NXR7M3P;
@@ -618,6 +604,7 @@
 			baseConfigurationReference = 75F917F0537AD6A96AA450DC /* Pods-swift_D.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7T5NXR7M3P;
