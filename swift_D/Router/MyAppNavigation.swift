@@ -14,6 +14,8 @@ enum MyNavigation: Navigation {
     case test(String)
     case gitHub
     case mine
+    case WCDB
+    
 //    case profile(Person)
 }
 struct MyAppNavigation: AppNavigation {
@@ -32,8 +34,9 @@ struct MyAppNavigation: AppNavigation {
             case .gitHub:
                 return GitHubViewController()
             case .mine:
-               
                 return MineViewController()
+            case .WCDB:
+                return WCDBViewController()
             }
         }
         return UIViewController()

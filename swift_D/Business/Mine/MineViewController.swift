@@ -46,6 +46,10 @@ class MineViewController: BaseViewController {
             cell.accessoryType = .disclosureIndicator //行末加箭头
             return cell
             }.disposed(by: disposeBag)
+//        点击cell
+        tableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
+            self?.navigate(.WCDB)
+        }).disposed(by: disposeBag)
 
             self.loadDataFinished()
         super.setupUI()

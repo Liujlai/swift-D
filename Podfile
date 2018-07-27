@@ -12,6 +12,7 @@ target 'swift_D' do
   pod 'ObjectMapper'                                #JSON解析
   pod 'MBProgressHUD'                               #HUD提示
   pod 'MJRefresh'                                   #refresh
+  pod 'WCDB.swift'                                  #数据库
   # Pods for swift_D
 
 end
