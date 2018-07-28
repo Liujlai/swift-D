@@ -20,13 +20,13 @@ class MineView: UIView {
     func reder(){
 
         HStack(
-            icon.bg(kRandom+",0.5")     //随机颜色+0.5的透明度
+            icon.bg(kRandom+",0.5")     //图片随机颜色+0.5的透明度
                 .pin(100,100)            //宽高都为100
-                .radius(-1),            //高度一半的圆角
+                .radius(-1),            //高度一半的圆角,显示出来就是一个圆
             VStack(
                 "<-->",
                 name.style(commonLabelStyle),
-                15,
+                0,
                 tel.style(commonLabelStyle),
                 "<-->"
             )

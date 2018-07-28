@@ -75,20 +75,79 @@ class WCDBViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let V = View.bg(kLineColor+",0.8")
+            .addTo(self.view.window!)
+            .makeCons({$0.edge.equal(self.view.window!)})
+            .onClick {[unowned self] _ in
+                self.view.window?.viewWithTag(101)?.removeFromSuperview()
+        }
+        V.tag = 101
+        
+        let vv = View.bg("white")
+            .radius(8)
+            .pin(.center).pin(.xy(100, 240)).addTo(V).onClick({_ in })
+        
+        Label.str("标题").font("18")
+            .align(.center).pin(40)
+            .makeCons({$0.top.left.right.equal(0)}).addTo(vv)
+        
+        Button.str("点击")
+            .pin(.center)
+            .color("cyan")
+            .addTo(vv).onClick {[unowned self] _ in
+                self.view.window?.viewWithTag(101)?.removeFromSuperview()
+                self.showAllFonts()
+        }
+    }
+    func showAllFonts(){
+        let familyNames = UIFont.familyNames
+        
+        var index = 0
+        
+        for familyName in familyNames
+        {
+            let fontNames = UIFont.fontNames(forFamilyName: familyName as String)
+            for fontName in fontNames
+            {
+                index = index+1
+                
+                print("第 \(index) 个字体，字体font名称：\(fontName)")
+            }
+
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 }

@@ -13,6 +13,7 @@ target 'swift_D' do
   pod 'MBProgressHUD'                               #HUD提示
   pod 'MJRefresh'                                   #refresh
   pod 'WCDB.swift'                                  #数据库
+  pod 'SDWebImage'                                  #网络图片
   # Pods for swift_D
 
 end

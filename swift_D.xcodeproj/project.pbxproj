@@ -40,6 +40,10 @@
 		7880CDEE21080B2000D8B6B1 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880CDED21080B2000D8B6B1 /* Reachability.swift */; };
 		7880CE222109C57400D8B6B1 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880CE212109C57300D8B6B1 /* Sample.swift */; };
 		7880CE242109C60200D8B6B1 /* WCDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880CE232109C60200D8B6B1 /* WCDBViewController.swift */; };
+		78CD1E85210C12C800978330 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD1E84210C12C800978330 /* HomeViewController.swift */; };
+		78CD1E88210C132500978330 /* StackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD1E87210C132500978330 /* StackModel.swift */; };
+		78CD1E8A210C136B00978330 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD1E89210C136B00978330 /* StackView.swift */; };
+		78CD1E8C210C1F9D00978330 /* StackScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD1E8B210C1F9D00978330 /* StackScrollView.swift */; };
 		78D4A53F20FEE183001D1DE7 /* LTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4A53E20FEE183001D1DE7 /* LTabbarViewController.swift */; };
 		78D4A54120FEE3E1001D1DE7 /* LNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4A54020FEE3E1001D1DE7 /* LNavigationController.swift */; };
 		78D4A54320FEE7B3001D1DE7 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4A54220FEE7B3001D1DE7 /* Common.swift */; };
@@ -87,6 +91,10 @@
 		7880CDED21080B2000D8B6B1 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		7880CE212109C57300D8B6B1 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		7880CE232109C60200D8B6B1 /* WCDBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDBViewController.swift; sourceTree = "<group>"; };
+		78CD1E84210C12C800978330 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		78CD1E87210C132500978330 /* StackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackModel.swift; sourceTree = "<group>"; };
+		78CD1E89210C136B00978330 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		78CD1E8B210C1F9D00978330 /* StackScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackScrollView.swift; sourceTree = "<group>"; };
 		78D4A53E20FEE183001D1DE7 /* LTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTabbarViewController.swift; sourceTree = "<group>"; };
 		78D4A54020FEE3E1001D1DE7 /* LNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNavigationController.swift; sourceTree = "<group>"; };
 		78D4A54220FEE7B3001D1DE7 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -242,6 +250,17 @@
 			path = WCDB;
 			sourceTree = "<group>";
 		};
+		78CD1E86210C12D100978330 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				78CD1E84210C12C800978330 /* HomeViewController.swift */,
+				78CD1E87210C132500978330 /* StackModel.swift */,
+				78CD1E89210C136B00978330 /* StackView.swift */,
+				78CD1E8B210C1F9D00978330 /* StackScrollView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		78D4A54420FEEA47001D1DE7 /* Base(Navigation+Tabbar) */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +310,7 @@
 				7861228520FF1ABB00D2FB0F /* MVVM */,
 				78DDB6832101C6D70093F587 /* Mine */,
 				7880CE202109C46300D8B6B1 /* WCDB */,
+				78CD1E86210C12D100978330 /* Home */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -388,6 +408,7 @@
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
 				"${BUILT_PRODUCTS_DIR}/WCDB.swift/WCDBSwift.framework",
 			);
@@ -402,6 +423,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WCDBSwift.framework",
 			);
@@ -435,8 +457,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78CD1E8A210C136B00978330 /* StackView.swift in Sources */,
 				78D4A54720FEEC65001D1DE7 /* MD5Digest.swift in Sources */,
 				7861229120FF21E400D2FB0F /* ValidationResult.swift in Sources */,
+				78CD1E88210C132500978330 /* StackModel.swift in Sources */,
 				786787EE20FDD9D000A7E9FE /* LoginViewController.swift in Sources */,
 				786787EC20FDD99C00A7E9FE /* LoginViewStevia.swift in Sources */,
 				786787F020FDDD3F00A7E9FE /* TestCell.swift in Sources */,
@@ -446,6 +470,7 @@
 				7861228920FF1BDD00D2FB0F /* GitHubModel.swift in Sources */,
 				7861229320FF228400D2FB0F /* GitHubSignupService.swift in Sources */,
 				786122A320FF2E9900D2FB0F /* RefreshViewController.swift in Sources */,
+				78CD1E85210C12C800978330 /* HomeViewController.swift in Sources */,
 				7861227E20FEF16400D2FB0F /* Api.swift in Sources */,
 				7861228F20FF1DFB00D2FB0F /* GitHubNetworkService.swift in Sources */,
 				786122A120FF2E2600D2FB0F /* RefreshViewModel.swift in Sources */,
@@ -456,6 +481,7 @@
 				7861227A20FEF0B900D2FB0F /* Response+ObjectMapper.swift in Sources */,
 				7861228120FEF27E00D2FB0F /* Douban.swift in Sources */,
 				7861229720FF234000D2FB0F /* BindingExtensions.swift in Sources */,
+				78CD1E8C210C1F9D00978330 /* StackScrollView.swift in Sources */,
 				786787DC20FDD98100A7E9FE /* README.swift in Sources */,
 				7861228D20FF1CF700D2FB0F /* GitHubViewController.swift in Sources */,
 				786787F420FDE49B00A7E9FE /* TestViewController.swift in Sources */,

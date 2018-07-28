@@ -28,7 +28,7 @@ class Sample: TableCodable {
             return [
                 identifier: ColumnConstraintBinding(isPrimary: true),    //定义了 isPrimary: 的字段，支持以自增的方式进行插入数据。
 //
-////                当需要进行自增插入时，对象需设置 isAutoIncrement 参数为 true，则数据库会使用 已有数据中最大的值+1 作为主键的值。
+////            当需要进行自增插入时，对象需设置 isAutoIncrement 参数为 true，则数据库会使用 已有数据中最大的值+1 作为主键的值。
 ////            let autoIncrementObject = Sample()
 ////            autoIncrementObject.isAutoIncrement = true
 ////            

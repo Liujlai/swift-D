@@ -22,9 +22,9 @@ class MineViewController: BaseViewController {
     fileprivate lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.frame = CGRect(x: 0,
-                                 y: KNAVIGATIONANDSTATUSBARHEIGHT,
+                                 y: kNavBarH+kStatusH,
                                  width: kScreenW,
-                                 height: kScreenH-KNAVIGATIONANDSTATUSBARHEIGHT)
+                                 height: kScreenH-kNavBarH-kStatusH)
         tableView.tableFooterView = UIView()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return tableView
@@ -33,7 +33,7 @@ class MineViewController: BaseViewController {
     //        tableHeaderView
     fileprivate lazy var mineView: MineView = {
        let mineView = MineView()
-        mineView.frame = CGRect(x: 0, y: KNAVIGATIONANDSTATUSBARHEIGHT, width: kScreenW, height: 160)
+        mineView.frame = CGRect(x: 0, y: kNavBarH+kStatusH, width: kScreenW, height: 160)
         return mineView
     }()
     
