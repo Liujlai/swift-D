@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class MineViewController: BaseViewController {
     //       自定义数据
     public var arr = [String]()
@@ -48,7 +47,8 @@ class MineViewController: BaseViewController {
             }.disposed(by: disposeBag)
 //        点击cell
         tableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
-            self?.navigate(.WCDB)
+            indexPath.row==1 ?self?.navigate(.WCDB):self?.navigate(.Animations)
+//            self?.navigate(.WCDB)
         }).disposed(by: disposeBag)
 
             self.loadDataFinished()

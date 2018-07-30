@@ -58,10 +58,10 @@ import UIKit
      swift_D-Bridging-Header.h
      */
 
-// MARK: -  Refresh
+// MARK: -  Refresh上拉刷新
 /**
     Refresh/
-    上拉刷新和下拉加在
+    上拉刷新和下拉加载
  
     例：
     Test/RefreshViewController.swift
@@ -73,4 +73,30 @@ import UIKit
     页面加载数据时的一个动画，有数据时
      */
 
+// MARK: -  UserDefaults键值存储
+
+/**
+ 
+ DefineKeys.swift中添加对应的键
+
+用法：
+ Defaults[.username] = "joe"  //存
+ MBProgressHUD.showInfo(Defaults[.username]!)    //取并HUD提示出来
+ //Remove all keys
+ //To reset user defaults, use removeAll method.
+ Defaults.removeAll()
+ */
+
+// MARK: -  WCDB数据库
+
+
+/**
+ 
+ WCDB
+ ./Sample.swift
+ ./WCDBViewController.swift
+ 
+ 数据库的基本操作
+ 
+ */
 

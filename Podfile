@@ -14,6 +14,8 @@ target 'swift_D' do
   pod 'MJRefresh'                                   #refresh
   pod 'WCDB.swift'                                  #数据库
   pod 'SDWebImage'                                  #网络图片
+  pod 'SwiftyUserDefaults', '4.0.0-alpha.1'            #
+  pod 'Macaw'
   # Pods for swift_D
 
 end

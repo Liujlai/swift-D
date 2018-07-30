@@ -15,6 +15,7 @@ enum MyNavigation: Navigation {
     case gitHub
     case mine
     case WCDB
+    case Animations
     
 //    case profile(Person)
 }
@@ -37,6 +38,8 @@ struct MyAppNavigation: AppNavigation {
                 return MineViewController()
             case .WCDB:
                 return WCDBViewController()
+            case .Animations:
+                return AnimationsExampleController()
             }
         }
         return UIViewController()

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78089956210C6A0B004D8DF4 /* DefineKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78089955210C6A0B004D8DF4 /* DefineKeys.swift */; };
+		7808995C210EB591004D8DF4 /* AnimationsExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808995B210EB591004D8DF4 /* AnimationsExampleController.swift */; };
+		7808995E210EB622004D8DF4 /* AnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808995D210EB622004D8DF4 /* AnimationsView.swift */; };
 		7861227420FEEE6F00D2FB0F /* MBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7861227320FEEE6F00D2FB0F /* MBProgressHUD.swift */; };
 		7861227920FEF0B900D2FB0F /* Single+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7861227620FEF0B900D2FB0F /* Single+ObjectMapper.swift */; };
 		7861227A20FEF0B900D2FB0F /* Response+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7861227720FEF0B900D2FB0F /* Response+ObjectMapper.swift */; };
@@ -55,6 +58,9 @@
 
 /* Begin PBXFileReference section */
 		75F917F0537AD6A96AA450DC /* Pods-swift_D.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_D.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift_D/Pods-swift_D.release.xcconfig"; sourceTree = "<group>"; };
+		78089955210C6A0B004D8DF4 /* DefineKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefineKeys.swift; sourceTree = "<group>"; };
+		7808995B210EB591004D8DF4 /* AnimationsExampleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsExampleController.swift; sourceTree = "<group>"; };
+		7808995D210EB622004D8DF4 /* AnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsView.swift; sourceTree = "<group>"; };
 		7861227020FEEDDC00D2FB0F /* swift_D-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift_D-Bridging-Header.h"; sourceTree = "<group>"; };
 		7861227320FEEE6F00D2FB0F /* MBProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBProgressHUD.swift; sourceTree = "<group>"; };
 		7861227620FEF0B900D2FB0F /* Single+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Single+ObjectMapper.swift"; sourceTree = "<group>"; };
@@ -123,6 +129,15 @@
 				78EEA1283B95309D9B62F971 /* Pods_swift_D.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7808995A210EB553004D8DF4 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				7808995B210EB591004D8DF4 /* AnimationsExampleController.swift */,
+				7808995D210EB622004D8DF4 /* AnimationsView.swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		7861227520FEF0A600D2FB0F /* ObjectMapper */ = {
@@ -296,6 +311,7 @@
 			children = (
 				786787D920FDD98100A7E9FE /* AppDelegate.swift */,
 				78D4A54220FEE7B3001D1DE7 /* Common.swift */,
+				78089955210C6A0B004D8DF4 /* DefineKeys.swift */,
 				7861228320FF102C00D2FB0F /* BaseViewController.swift */,
 				78D4A54420FEEA47001D1DE7 /* Base(Navigation+Tabbar) */,
 			);
@@ -311,6 +327,7 @@
 				78DDB6832101C6D70093F587 /* Mine */,
 				7880CE202109C46300D8B6B1 /* WCDB */,
 				78CD1E86210C12D100978330 /* Home */,
+				7808995A210EB553004D8DF4 /* Animations */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -403,13 +420,16 @@
 				"${BUILT_PRODUCTS_DIR}/Cupcake/Cupcake.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Macaw/Macaw.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/WCDB.swift/WCDBSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -418,13 +438,16 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cupcake.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Macaw.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WCDBSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +505,8 @@
 				7861228120FEF27E00D2FB0F /* Douban.swift in Sources */,
 				7861229720FF234000D2FB0F /* BindingExtensions.swift in Sources */,
 				78CD1E8C210C1F9D00978330 /* StackScrollView.swift in Sources */,
+				7808995E210EB622004D8DF4 /* AnimationsView.swift in Sources */,
+				7808995C210EB591004D8DF4 /* AnimationsExampleController.swift in Sources */,
 				786787DC20FDD98100A7E9FE /* README.swift in Sources */,
 				7861228D20FF1CF700D2FB0F /* GitHubViewController.swift in Sources */,
 				786787F420FDE49B00A7E9FE /* TestViewController.swift in Sources */,
@@ -494,6 +519,7 @@
 				78DE07702101912700733FC2 /* MineViewController.swift in Sources */,
 				7861227B20FEF0B900D2FB0F /* ObservableType+ObjectMapper.swift in Sources */,
 				7880CE222109C57400D8B6B1 /* Sample.swift in Sources */,
+				78089956210C6A0B004D8DF4 /* DefineKeys.swift in Sources */,
 				7880CDEE21080B2000D8B6B1 /* Reachability.swift in Sources */,
 				7861229F20FF2DE300D2FB0F /* NetworkService.swift in Sources */,
 				7861228720FF1B6300D2FB0F /* GitHubAPI.swift in Sources */,

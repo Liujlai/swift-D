@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftyUserDefaults
 class HomeViewController: UIViewController {
 
     lazy var scrollView: StackScrollView = {
@@ -49,6 +49,8 @@ class HomeViewController: UIViewController {
 extension HomeViewController: StackScrollViewDelegate {
     func stackScrollViewBtnDidClick(view: StackScrollView, model: StackModel) {
         print("点击了\(model.title!)");
+        Defaults[.username] = "joe"
+        MBProgressHUD.showInfo(Defaults[.username]!)
         navigate(.login)//跳转到test
     }
 }
